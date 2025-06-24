@@ -1,10 +1,131 @@
-<!DOCTYPE html>
-<html>
+<!DOCTYPE html><html lang="en">
 <head>
-  <title>My GitHub Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anuj's Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #1f2937;
+      --accent: #6366f1;
+      --text: #f9fafb;
+      --muted: #9ca3af;
+      --bg: #111827;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Inter', sans-serif;
+    }
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    header h1 {
+      font-size: 3rem;
+      font-weight: 800;
+    }
+    header p {
+      color: var(--muted);
+      margin-top: 0.5rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    section {
+      max-width: 800px;
+      margin: 0 auto 4rem auto;
+      padding: 1rem;
+    }
+    section h2 {
+      font-size: 2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+    .project {
+      background-color: #1e293b;
+      padding: 1rem;
+      border-radius: 0.75rem;
+      margin-bottom: 1rem;
+      transition: transform 0.2s;
+    }
+    .project:hover {
+      transform: translateY(-4px);
+    }
+    .project h3 {
+      margin-bottom: 0.5rem;
+    }
+    .project p {
+      color: var(--muted);
+    }
+    footer {
+      text-align: center;
+      margin-top: 4rem;
+      color: var(--muted);
+      font-size: 0.875rem;
+    }
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      section h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Hello from GitHub Pages!</h1>
-  <p>This is my first website hosted with GitHub.</p>
+  <header>
+    <h1><!-- Your Full Name Here -->Anuj Score</h1>
+    <p><!-- Short tagline or role -->Electronics & Communication Engineer | Embedded & VLSI Enthusiast</p>
+    <nav>
+      <!-- Update links accordingly -->
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      <!-- Write a short bio here -->
+      I am a passionate electronics engineer with interests in embedded systems, VLSI, and digital design. Currently preparing for GATE and ISRO Scientist SC roles.
+    </p>
+  </section>  <section id="projects">
+    <h2>Projects</h2><!-- Repeat for each project -->
+<div class="project">
+  <h3><!-- Project Title -->Microcontroller-Based Smart Home</h3>
+  <p><!-- Project description -->Designed a smart home system using ATmega328P and sensors to automate lighting and climate control.</p>
+</div>
+
+<div class="project">
+  <h3>VLSI Layout of 4-Bit ALU</h3>
+  <p>Developed the layout and simulation of a 4-bit ALU in Cadence using standard cell design flow.</p>
+</div>
+
+  </section>  <section id="contact">
+    <h2>Contact</h2>
+    <p><!-- Your preferred email or contact method -->
+      📧 anuj@example.com<br />
+      🔗 <a href="https://github.com/anujscore" style="color: var(--accent);">github.com/anujscore</a>
+    </p>
+  </section>  <footer>
+    &copy; <!-- Year -->2025 Anuj Score. All rights reserved.
+  </footer>
 </body>
 </html>
