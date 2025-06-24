@@ -1,149 +1,174 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anuj | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Anuj | VLSI & Embedded 3D</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-color: #0f0f0f;
-      --primary: #00f5a0;
-      --secondary: #00d9f5;
-      --text-color: #f1f1f1;
-      --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
-    }* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  background-color: var(--bg-color);
-  font-family: 'Inter', sans-serif;
-  color: var(--text-color);
-  line-height: 1.6;
-}
-
-header {
-  padding: 2rem;
-  text-align: center;
-}
-
-h1 {
-  font-size: 3rem;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 800;
-}
-
-h2 {
-  font-size: 2rem;
-  margin: 1rem 0;
-  color: #ffffffbb;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 1rem;
-}
-
-nav a {
-  color: var(--text-color);
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-nav a:hover {
-  color: var(--primary);
-}
-
-section {
-  max-width: 900px;
-  margin: auto;
-  padding: 2rem;
-}
-
-.card {
-  background-color: #1e1e1e;
-  padding: 1.5rem;
-  border-radius: 16px;
-  margin-bottom: 2rem;
-  box-shadow: 0 0 20px rgba(0, 255, 170, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card h3 {
-  margin-bottom: 0.5rem;
-  background: var(--gradient);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 600;
-}
-
-footer {
-  text-align: center;
-  padding: 2rem;
-  font-size: 0.9rem;
-  color: #888;
-}
-
-@media (max-width: 600px) {
-  h1 {
-    font-size: 2rem;
-  }
-
-  nav {
-    flex-direction: column;
-  }
-}
-
+      --bg: #0a0a0f;
+      --fg: #eee;
+      --accent1: #ff5e7a;
+      --accent2: #ffbe42;
+      --gradient: linear-gradient(135deg, var(--accent1), var(--accent2));
+      --nav-height: 60px;
+    }
+    * {
+      margin:0; padding:0; box-sizing:border-box;
+    }
+    body {
+      background: var(--bg);
+      color: var(--fg);
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    header {
+      position: fixed;
+      top:0; left:0; width:100%;
+      height: var(--nav-height);
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.4);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      z-index:100;
+    }
+    nav {
+      display:flex; gap:24px;
+    }
+    nav a {
+      color: var(--fg);
+      text-decoration:none;
+      font-weight:500;
+      padding:8px;
+      transition: color .3s;
+    }
+    nav a:hover {
+      color: var(--accent2);
+    }
+    .hero {
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      height:100vh;
+      text-align:center;
+      padding-top: var(--nav-height);
+      background: var(--bg);
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      background: var(--gradient);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    }
+    .hero p {
+      margin-top:16px;
+      font-size:1.2rem;
+      color: #aaa;
+    }
+    section {
+      max-width:900px;
+      margin:0 auto;
+      padding:100px 20px 60px;
+    }
+    h2 {
+      font-size:2rem;
+      background: var(--gradient);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      margin-bottom:24px;
+      text-align:center;
+    }
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
+      gap:24px;
+    }
+    .card {
+      background: #14141f;
+      border-radius:12px;
+      padding:20px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.5);
+      transition: transform .3s;
+    }
+    .card:hover { transform: translateY(-5px); }
+    .card h3 {
+      margin-bottom:12px;
+      font-size:1.4rem;
+      background: var(--gradient);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+    }
+    footer {
+      text-align:center;
+      padding:40px 20px;
+      font-size:0.9rem;
+      color:#555;
+    }
+    @media (max-width:600px) {
+      .hero h1 { font-size:2.5rem; }
+      nav { gap:12px; font-size:0.9rem; }
+    }
   </style>
-</head><body>
+</head>
+<body>
+
   <header>
-    <h1>Anuj</h1>
-    <h2>Electronics & Communication Engineer | VLSI & Embedded Systems Enthusiast</h2>
     <nav>
       <a href="#about">About</a>
       <a href="#projects">Projects</a>
       <a href="#skills">Skills</a>
       <a href="#contact">Contact</a>
     </nav>
-  </header>  <section id="about">
-    <div class="card">
-      <h3>About Me</h3>
-      <p>Hello! I'm Anuj, a passionate Electronics and Communication Engineering graduate. My interests include VLSI design, embedded 3D systems, and signal processing. I love building impactful tech and exploring the frontiers of hardware-software integration.</p>
+  </header>
+
+  <div class="hero">
+    <h1>Hello, I’m Anuj</h1>
+    <p>Electronics & Communication Engineer — VLSI • Embedded 3D • Signal Processing</p>
+  </div>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a recent ECE graduate with deep interests in VLSI design, embedded 3D systems, and advanced signal processing. I love translating complex hardware‑software problems into elegant, real‑world solutions.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Featured Projects</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>VLSI ALU Design</h3>
+        <p>Full RTL→GDSII flow using Cadence, designed a modular ALU supporting arithmetic, logic, and shift operations.</p>
+      </div>
+      <div class="card">
+        <h3>Embedded 3D Simulation</h3>
+        <p>Real‑time 3D object tracking on embedded ARM hardware, integrating sensor fusion and visualization.</p>
+      </div>
+      <div class="card">
+        <h3>Signal Processing on Cortex-M</h3>
+        <p>Implemented FFT and IIR filtering for biomedical signal analysis on ARM Cortex-M series.</p>
+      </div>
     </div>
-  </section>  <section id="projects">
-    <div class="card">
-      <h3>Featured Projects</h3>
-      <ul>
-        <li><strong>VLSI-Based ALU Design</strong> – RTL-to-GDSII flow in Cadence</li>
-        <li><strong>3D Embedded System Simulation</strong> – Simulated real-time object tracking in embedded 3D space</li>
-        <li><strong>Signal Processing on ARM Cortex</strong> – Implemented FFT/IIR filter for biomedical signals</li>
-      </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills & Tools</h2>
+    <div class="grid">
+      <div class="card"><h3>Languages</h3><p>Verilog • C • Python</p></div>
+      <div class="card"><h3>EDA & Tools</h3><p>Cadence • ModelSim • Vivado • MATLAB</p></div>
+      <div class="card"><h3>Domains</h3><p>VLSI Design • Embedded Systems • Signal Processing • PCB Design</p></div>
     </div>
-  </section>  <section id="skills">
-    <div class="card">
-      <h3>Skills</h3>
-      <p><strong>Languages:</strong> Verilog, C, Python</p>
-      <p><strong>Tools:</strong> Cadence, ModelSim, Xilinx Vivado, MATLAB</p>
-      <p><strong>Domains:</strong> VLSI Design, Embedded Systems, Signal Processing</p>
-    </div>
-  </section>  <section id="contact">
-    <div class="card">
-      <h3>Contact</h3>
-      <p>Feel free to reach out for collaborations or opportunities!</p>
-      <p><strong>Email:</strong> anuj@example.com</p>
-      <p><strong>GitHub:</strong> <a href="https://github.com/anuj-core" target="_blank">github.com/anuj-core</a></p>
-    </div>
-  </section>  <footer>
-    <p>Designed & Built by Anuj &mdash; 2025</p>
+  </section>
+
+  <section id="contact">
+    <h2>Get In Touch</h2>
+    <p>Email me at <a href="mailto:anuj@example.com" style="color:var(--accent2)">anuj@example.com</a> or find me on <a href="https://github.com/anuj-core" target="_blank" style="color:var(--accent2)">GitHub</a>.</p>
+  </section>
+
+  <footer>
+    <p>© Anuj 2025 — Built with passion & precision.</p>
   </footer>
-</body></html>
+
+</body>
+</html>
