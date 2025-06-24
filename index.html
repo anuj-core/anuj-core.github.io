@@ -1,137 +1,154 @@
-<!DOCTYPE html><html lang="en" data-theme="dark">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Anuj Core — Electronics & Embedded Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-  <script>
-    // Smooth scroll behavior
-    document.addEventListener('DOMContentLoaded', () => {
-      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-          e.preventDefault();
-          document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-          });
-        });// Theme toggle logic
-    const toggleBtn = document.getElementById('theme-toggle');
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
-
-    toggleBtn?.addEventListener('click', () => {
-      const currentTheme = document.documentElement.getAttribute('data-theme');
-      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-    });
-  });
-});
-
-  </script>
+  <title>Anuj | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;700&display=swap" rel="stylesheet" />
   <style>
-    /* Floating call-to-action button */
-    .cta-float {
-      position: fixed;
-      bottom: 1.5rem;
-      right: 1.5rem;
-      background: #7f5af0;
-      color: #fff;
-      padding: 0.75rem 1.25rem;
-      border-radius: 30px;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-      transition: 0.3s;
-      z-index: 999;
-    }
-    .cta-float:hover {
-      background: #6c4bdb;
-    }
-    /* Theme toggle button */
-    .theme-toggle {
-      cursor: pointer;
-      background: none;
-      border: 2px solid #7f5af0;
-      color: #7f5af0;
-      border-radius: 4px;
-      padding: 0.4rem 0.75rem;
-      font-weight: 600;
-      margin-left: 1rem;
-    }
+    :root {
+      --primary-color: #0f0f0f;
+      --secondary-color: #555;
+      --bg-light: #ffffff;
+      --font: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--bg-light);
+  color: var(--primary-color);
+  scroll-behavior: smooth;
+  line-height: 1.6;
+}
+
+header, section, footer {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1, h2, h3 {
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+p, a {
+  font-size: 1.1rem;
+  text-align: center;
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeIn 1.2s ease-out forwards;
+}
+
+.delay-1 { animation-delay: 0.3s; }
+.delay-2 { animation-delay: 0.6s; }
+.delay-3 { animation-delay: 0.9s; }
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.image-box {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.image-box img {
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.contact-links a {
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  padding: 40px;
+  color: #999;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: none;
+  z-index: 999;
+}
+
+.scroll-top.visible {
+  display: block;
+}
+
   </style>
 </head>
 <body>
-  <nav class="nav">
-    <div class="logo">Anuj<span>Core</span></div>
-    <ul class="menu">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#certificates">Certificates</a></li>
-      <li><a href="#blog">Blog</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><button id="theme-toggle" class="theme-toggle">Toggle Theme</button></li>
-    </ul>
-  </nav>  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1>Hello, I'm <strong>Anuj Core</strong></h1>
-      <p>Electronics & Embedded Systems Innovator | GATE/ISRO Aspirant</p>
-      <a href="#projects" class="cta">View Projects</a>
-    </div>
-  </section>  <section id="about" class="about">
+  <header class="fade-in delay-1">
+    <h1>Hello, I'm Anuj</h1>
+    <p>I build clean and elegant websites, blending minimal design with modern web technologies.</p>
+  </header>  <section class="fade-in delay-2">
     <h2>About Me</h2>
-    <p>I'm Anuj, an aspiring electronics engineer passionate about embedded systems, VLSI design, and competitive exams like GATE and ISRO. I enjoy building microcontroller-based projects, exploring digital logic, and designing optimized circuits.</p>
-  </section>  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Smart Home Automation</h3>
-        <p>ATmega328P-based system with sensors for automating lighting and HVAC control. Controlled via Bluetooth and voice commands.</p>
-      </div>
-      <div class="card">
-        <h3>4-Bit ALU Design</h3>
-        <p>VLSI implementation using Cadence Virtuoso with full simulation and layout verification.</p>
-      </div>
-      <div class="card">
-        <h3>IoT Weather Monitor</h3>
-        <p>ESP32-based weather station with BME280 sensor, displaying real-time data on a cloud dashboard using MQTT.</p>
-      </div>
+    <p>I'm passionate about creating immersive and performant web experiences. I focus on clarity,
+      simplicity, and delightful interactions using clean code and visual design principles.</p>
+    <div class="image-box">
+      <img src="https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=800&q=80"
+           alt="Anuj developer setup" />
     </div>
-  </section>  <section id="certificates" class="projects">
-    <h2>Certificates</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>NPTEL Embedded Systems</h3>
-        <p>Covered ARM architecture, RTOS concepts, and interfacing.</p>
-      </div>
-      <div class="card">
-        <h3>VLSI Design Course</h3>
-        <p>Completed comprehensive training on digital layout, logic synthesis, and CMOS design.</p>
-      </div>
+  </section>  <section class="fade-in delay-3">
+    <h2>Get in Touch</h2>
+    <p>I'm open to collaboration, freelance work, or just a good tech conversation!</p>
+    <div class="contact-links">
+      <a href="mailto:anuj@example.com">📧 Email</a>
+      <a href="https://github.com/anuj-core" target="_blank">🐙 GitHub</a>
     </div>
-  </section>  <section id="blog" class="projects">
-    <h2>Blog</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Lorem ipsum</h3>
-        <p> Lorem ipsum didie eidodhebe9e idje did dididod did you give you sampof.</p>
-      </div>
-      <div class="card">
-        <h3>Verilog for Beginners</h3>
-        <p>A short crash course for digital design students starting with Verilog HDL.</p>
-      </div>
-    </div>
-  </section>  <section id="contact" class="contact">
-    <h2>Contact</h2>
-    <p>📧 anuj@example.com</p>
-    <p>🔗 <a href="https://github.com/anujcore">github.com/anujcore</a></p>
-    <p>📞 <em><!-- Optional phone or WhatsApp link --></em></p>
-  </section><a class="cta-float" href="https://wa.me/919876543210" target="_blank">📞 Book a Call</a>
+  </section>  <footer>
+    © <script>document.write(new Date().getFullYear())</script> Anuj. All rights reserved.
+  </footer><button class="scroll-top" id="scrollTopBtn">↑ Top</button>
 
-  <footer>
-    &copy; 2025 Anuj Core. All rights reserved.
-  </footer>
-</body>
+  <script>
+    const btn = document.getElementById('scrollTopBtn');
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 300) {
+        btn.classList.add('visible');
+      } else {
+        btn.classList.remove('visible');
+      }
+    });
+    btn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script></body>
 </html>
