@@ -1,35 +1,45 @@
 <!DOCTYPE html><html lang="en"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Anuj | Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --copper-blue: #00c9ff;
-      --deep-blue: #002733;
-      --white: #ffffff;
-      --text-gray: #d3d3d3;
+      --bg-color: #0f0f0f;
+      --primary: #00f5a0;
+      --secondary: #00d9f5;
+      --text-color: #f1f1f1;
+      --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
     }* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Fira Code', monospace;
 }
 
 body {
-  background: linear-gradient(135deg, var(--deep-blue), #0c1c28);
-  color: var(--text-gray);
+  background-color: var(--bg-color);
+  font-family: 'Inter', sans-serif;
+  color: var(--text-color);
   line-height: 1.6;
 }
 
 header {
   padding: 2rem;
   text-align: center;
-  background: linear-gradient(to right, var(--copper-blue), var(--white));
+}
+
+h1 {
+  font-size: 3rem;
+  background: var(--gradient);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 1rem 0;
+  color: #ffffffbb;
 }
 
 nav {
@@ -37,103 +47,103 @@ nav {
   justify-content: center;
   gap: 2rem;
   padding: 1rem;
-  background-color: #01161e;
 }
 
 nav a {
-  color: var(--copper-blue);
+  color: var(--text-color);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--primary);
 }
 
 section {
-  padding: 3rem 2rem;
   max-width: 900px;
   margin: auto;
+  padding: 2rem;
 }
 
-.hero {
-  text-align: center;
+.card {
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 20px rgba(0, 255, 170, 0.05);
+  transition: transform 0.3s ease;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+.card:hover {
+  transform: translateY(-5px);
 }
 
-.hero p {
-  font-size: 1.2rem;
-  color: #bbbbbb;
-}
-
-.button {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 0.75rem 1.5rem;
-  background: var(--copper-blue);
-  color: #000;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-}
-
-.projects {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-}
-
-.project-card {
-  background-color: #0b2e3a;
-  padding: 1rem;
-  border-radius: 10px;
-  border: 1px solid var(--copper-blue);
-}
-
-.project-card h3 {
-  color: var(--white);
+.card h3 {
+  margin-bottom: 0.5rem;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
 }
 
 footer {
   text-align: center;
   padding: 2rem;
-  background-color: #01161e;
   font-size: 0.9rem;
+  color: #888;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  nav {
+    flex-direction: column;
+  }
 }
 
   </style>
 </head><body>
   <header>
-    <h1>Anuj | Electronics & Communication Engineer</h1>
-    <p>VLSI Design | Embedded C | Signal Processing</p>
-  </header>  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-    <a href="./Anuj_Resume.pdf" class="button" download>Download Resume</a>
-  </nav>  <section class="hero" id="about">
-    <h1>Hello, I'm Anuj</h1>
-    <p>I am passionate about building digital logic, embedded systems, and signal processing pipelines. Currently pursuing a degree in Electronics & Communication Engineering.</p>
+    <h1>Anuj</h1>
+    <h2>Electronics & Communication Engineer | VLSI & Embedded Systems Enthusiast</h2>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>  <section id="about">
+    <div class="card">
+      <h3>About Me</h3>
+      <p>Hello! I'm Anuj, a passionate Electronics and Communication Engineering graduate. My interests include VLSI design, embedded 3D systems, and signal processing. I love building impactful tech and exploring the frontiers of hardware-software integration.</p>
+    </div>
   </section>  <section id="projects">
-    <h2 style="color: var(--white); text-align:center; margin-bottom: 2rem;">Projects</h2>
-    <div class="projects">
-      <div class="project-card">
-        <h3>FPGA Based Digital Clock</h3>
-        <p>A Verilog-based digital clock design deployed on an FPGA board.</p>
-      </div>
-      <div class="project-card">
-        <h3>Embedded C Smart Sensor</h3>
-        <p>A real-time embedded system to monitor temperature and humidity using I2C protocol.</p>
-      </div>
-      <div class="project-card">
-        <h3>Speech Denoising using DSP</h3>
-        <p>Implemented a basic noise reduction algorithm using FIR filters and FFT.</p>
-      </div>
+    <div class="card">
+      <h3>Featured Projects</h3>
+      <ul>
+        <li><strong>VLSI-Based ALU Design</strong> – RTL-to-GDSII flow in Cadence</li>
+        <li><strong>3D Embedded System Simulation</strong> – Simulated real-time object tracking in embedded 3D space</li>
+        <li><strong>Signal Processing on ARM Cortex</strong> – Implemented FFT/IIR filter for biomedical signals</li>
+      </ul>
+    </div>
+  </section>  <section id="skills">
+    <div class="card">
+      <h3>Skills</h3>
+      <p><strong>Languages:</strong> Verilog, C, Python</p>
+      <p><strong>Tools:</strong> Cadence, ModelSim, Xilinx Vivado, MATLAB</p>
+      <p><strong>Domains:</strong> VLSI Design, Embedded Systems, Signal Processing</p>
     </div>
   </section>  <section id="contact">
-    <h2 style="color: var(--white); text-align:center; margin-bottom: 1rem;">Get In Touch</h2>
-    <p style="text-align:center;">Email: anuj.ec.engg@example.com | GitHub: <a href="https://github.com/Anuj-Core" style="color: var(--copper-blue);">Anuj-Core</a></p>
+    <div class="card">
+      <h3>Contact</h3>
+      <p>Feel free to reach out for collaborations or opportunities!</p>
+      <p><strong>Email:</strong> anuj@example.com</p>
+      <p><strong>GitHub:</strong> <a href="https://github.com/anuj-core" target="_blank">github.com/anuj-core</a></p>
+    </div>
   </section>  <footer>
-    <p>&copy; 2025 Anuj | All rights reserved.</p>
+    <p>Designed & Built by Anuj &mdash; 2025</p>
   </footer>
 </body></html>
