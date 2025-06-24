@@ -15,10 +15,52 @@
           document.querySelector(this.getAttribute('href')).scrollIntoView({
             behavior: 'smooth'
           });
-        });
-      });
+        });// Theme toggle logic
+    const toggleBtn = document.getElementById('theme-toggle');
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) document.documentElement.setAttribute('data-theme', savedTheme);
+
+    toggleBtn?.addEventListener('click', () => {
+      const currentTheme = document.documentElement.getAttribute('data-theme');
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
     });
+  });
+});
+
   </script>
+  <style>
+    /* Floating call-to-action button */
+    .cta-float {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      background: #7f5af0;
+      color: #fff;
+      padding: 0.75rem 1.25rem;
+      border-radius: 30px;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      transition: 0.3s;
+      z-index: 999;
+    }
+    .cta-float:hover {
+      background: #6c4bdb;
+    }
+    /* Theme toggle button */
+    .theme-toggle {
+      cursor: pointer;
+      background: none;
+      border: 2px solid #7f5af0;
+      color: #7f5af0;
+      border-radius: 4px;
+      padding: 0.4rem 0.75rem;
+      font-weight: 600;
+      margin-left: 1rem;
+    }
+  </style>
 </head>
 <body>
   <nav class="nav">
@@ -30,16 +72,17 @@
       <li><a href="#certificates">Certificates</a></li>
       <li><a href="#blog">Blog</a></li>
       <li><a href="#contact">Contact</a></li>
+      <li><button id="theme-toggle" class="theme-toggle">Toggle Theme</button></li>
     </ul>
   </nav>  <section id="home" class="hero">
     <div class="hero-content">
       <h1>Hello, I'm <strong>Anuj Core</strong></h1>
-      <p><!-- Short tagline -->Electronics & Embedded Systems Innovator | GATE/ISRO Aspirant</p>
+      <p>Electronics & Embedded Systems Innovator | GATE/ISRO Aspirant</p>
       <a href="#projects" class="cta">View Projects</a>
     </div>
   </section>  <section id="about" class="about">
     <h2>About Me</h2>
-    <p><!-- Detailed bio -->I'm Anuj, an aspiring electronics engineer passionate about embedded systems, VLSI design, and competitive exams like GATE and ISRO. I enjoy building microcontroller-based projects, exploring digital logic, and designing optimized circuits.</p>
+    <p>I'm Anuj, an aspiring electronics engineer passionate about embedded systems, VLSI design, and competitive exams like GATE and ISRO. I enjoy building microcontroller-based projects, exploring digital logic, and designing optimized circuits.</p>
   </section>  <section id="projects" class="projects">
     <h2>Projects</h2>
     <div class="grid">
@@ -72,8 +115,8 @@
     <h2>Blog</h2>
     <div class="grid">
       <div class="card">
-        <h3>GATE Preparation Strategy</h3>
-        <p>My weekly GATE study plan and topic-wise coverage for ECE 2026.</p>
+        <h3>Lorem ipsum</h3>
+        <p> Lorem ipsum didie eidodhebe9e idje did dididod did you give you sampof.</p>
       </div>
       <div class="card">
         <h3>Verilog for Beginners</h3>
@@ -85,7 +128,9 @@
     <p>📧 anuj@example.com</p>
     <p>🔗 <a href="https://github.com/anujcore">github.com/anujcore</a></p>
     <p>📞 <em><!-- Optional phone or WhatsApp link --></em></p>
-  </section>  <footer>
+  </section><a class="cta-float" href="https://wa.me/919876543210" target="_blank">📞 Book a Call</a>
+
+  <footer>
     &copy; 2025 Anuj Core. All rights reserved.
   </footer>
 </body>
