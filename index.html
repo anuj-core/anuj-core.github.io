@@ -1,17 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Anuj | VLSI & Embedded 3D</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     :root {
       --bg: #0a0a0f;
       --fg: #eee;
-      --accent1: #ff5e7a;
-      --accent2: #ffbe42;
+      --accent1: #0088cc; /* copper blue */
+      --accent2: #ffffff; /* white */
+      --alt1: #0a0a0f;
+      --alt2: #445566; /* cobalt/grey-blue */
       --gradient: linear-gradient(135deg, var(--accent1), var(--accent2));
+      --shadow-gradient: linear-gradient(135deg, #555, #999);
       --nav-height: 60px;
     }
     * {
@@ -20,7 +23,7 @@
     body {
       background: var(--bg);
       color: var(--fg);
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Rubik', sans-serif;
       scroll-behavior: smooth;
     }
     header {
@@ -45,7 +48,7 @@
       transition: color .3s;
     }
     nav a:hover {
-      color: var(--accent2);
+      color: var(--accent1);
     }
     .hero {
       display:flex;
@@ -75,7 +78,7 @@
     }
     h2 {
       font-size:2rem;
-      background: var(--gradient);
+      background: var(--shadow-gradient);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
       margin-bottom:24px;
@@ -97,7 +100,7 @@
     .card h3 {
       margin-bottom:12px;
       font-size:1.4rem;
-      background: var(--gradient);
+      background: var(--shadow-gradient);
       -webkit-text-fill-color: transparent;
       -webkit-background-clip: text;
     }
@@ -113,28 +116,20 @@
     }
   </style>
 </head>
-<body>
-
-  <header>
+<body>  <header>
     <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact">Contact</a>
+      <a href="#about"><i class="fas fa-user"></i> About</a>
+      <a href="#projects"><i class="fas fa-code"></i> Projects</a>
+      <a href="#skills"><i class="fas fa-tools"></i> Skills</a>
+      <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
     </nav>
-  </header>
-
-  <div class="hero">
+  </header>  <div class="hero">
     <h1>Hello, I’m Anuj</h1>
     <p>Electronics & Communication Engineer — VLSI • Embedded 3D • Signal Processing</p>
-  </div>
-
-  <section id="about">
+  </div>  <section id="about">
     <h2>About Me</h2>
     <p>I’m a recent ECE graduate with deep interests in VLSI design, embedded 3D systems, and advanced signal processing. I love translating complex hardware‑software problems into elegant, real‑world solutions.</p>
-  </section>
-
-  <section id="projects">
+  </section>  <section id="projects">
     <h2>Featured Projects</h2>
     <div class="grid">
       <div class="card">
@@ -150,25 +145,17 @@
         <p>Implemented FFT and IIR filtering for biomedical signal analysis on ARM Cortex-M series.</p>
       </div>
     </div>
-  </section>
-
-  <section id="skills">
+  </section>  <section id="skills">
     <h2>Skills & Tools</h2>
     <div class="grid">
       <div class="card"><h3>Languages</h3><p>Verilog • C • Python</p></div>
       <div class="card"><h3>EDA & Tools</h3><p>Cadence • ModelSim • Vivado • MATLAB</p></div>
       <div class="card"><h3>Domains</h3><p>VLSI Design • Embedded Systems • Signal Processing • PCB Design</p></div>
     </div>
-  </section>
-
-  <section id="contact">
+  </section>  <section id="contact">
     <h2>Get In Touch</h2>
-    <p>Email me at <a href="mailto:anuj@example.com" style="color:var(--accent2)">anuj@example.com</a> or find me on <a href="https://github.com/anuj-core" target="_blank" style="color:var(--accent2)">GitHub</a>.</p>
-  </section>
-
-  <footer>
+    <p>Email me at <a href="mailto:anuj@example.com" style="color:var(--accent1)">anuj@example.com</a> or find me on <a href="https://github.com/anuj-core" target="_blank" style="color:var(--accent1)">GitHub</a>.</p>
+  </section>  <footer>
     <p>© Anuj 2025 — Built with passion & precision.</p>
-  </footer>
-
-</body>
+  </footer></body>
 </html>
